@@ -1,0 +1,61 @@
+@import "./variables.scss";
+
+.showcase-desc{
+    background-color: $guests;
+    .desc-main{
+        padding: 100px 0 80px;
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        position: relative;
+        @media(max-width:700px){
+            flex-direction: column;
+            align-items: center;
+        }
+        p{
+            font-size: 14px;
+            line-height: 20px;
+            color: $secondarycolor;
+            padding-top: 30px;
+        }
+        .left-part{
+            width: 360px;
+            @media(max-width:410px){
+                width: auto;
+            }
+            p{
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 50px;
+                    height: 8px;
+                    background-color: $brown;
+                    top: 100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        .right-part{
+            width: 365px;
+            @media(max-width:410px){
+                width: auto;
+            }
+            button{
+                padding: 11px 18px;
+                font-size: 14px;
+                line-height: 20px;
+                border-radius: 6px;
+                border: 1px solid $maincolor;
+                color: $maincolor;
+                background-color: transparent;
+                margin-top: 40px;
+                transition: 0.3s;
+                &:hover{
+                    background-color: $maincolor;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

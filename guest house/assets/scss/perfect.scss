@@ -1,0 +1,70 @@
+@import "./variables.scss";
+
+.perfect-main{
+    padding: 100px 0;
+    &>h2{
+        font-size: 32px;
+        line-height: 36px;
+        color: $maincolor;
+        margin-top: 30px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 8px;
+            background-color: $brown;
+            top: -30px;
+        }
+    }
+    &>p{
+        font-size: 16px;
+        line-height: 24px;
+        color: $maincolor;
+        margin-top: 14px;
+        width: 560px;
+        @media(max-width:600px){
+            width: auto;
+        }
+    }
+    .perfect-cards{
+        margin-top: 30px;
+    }
+}
+.perfect-cards{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @media(max-width:900px){
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0;
+    }
+    .part{
+        width: 48%;
+        @media(max-width:900px){
+            width: 100%;
+        }
+    }
+    .product{
+        display: flex;
+        gap: 16px;
+        margin-bottom: 40px;
+        img{
+            width: 36px;
+            height: 36px;
+        }
+        .desc-sec{
+            h4{
+                font-size: 14px;
+                line-height: 20px;
+                color: $maincolor;
+            }
+            p{
+                font-size: 14px;
+                line-height: 20px;
+                color: $secondarycolor;
+            }
+        }
+    }
+}

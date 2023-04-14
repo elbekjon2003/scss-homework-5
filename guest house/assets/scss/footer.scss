@@ -1,0 +1,115 @@
+@import "./variables.scss";
+
+footer{
+    padding: 100px 0;
+    background-color: $maincolor;
+    color: #fff;
+    section{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+        @media(max-width:1024px){
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+        }
+        .footer-links{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            @media(max-width:1024px){
+                order: 2;
+            }
+            h4{
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            a{
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+        .socials{
+            @media(max-width:1024px){
+                order: 3;
+            }
+            h4{
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            .footer-icons{
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                margin-top: 20px;
+                i{
+                    font-size: 25px;
+                }
+            }
+        }
+        .forms{
+            width: 560px;
+            @media(max-width:1024px){
+                order: 1;
+            }
+            @media(max-width:630px){
+                width: auto;
+            }
+            h4{
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            p{
+                font-size: 14px;
+                line-height: 20px;
+            }
+            form{
+                margin-top: 10px;
+                background-color: #fff;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 20px;
+                border-radius: 8px;
+                input{
+                    padding: 12px 30px;
+                    color: $maincolor;
+                    border: none;
+                    outline: none;
+                    border-radius: 8px;
+                    @media(max-width:350px){
+                        padding: 8px 16px;
+                        width: 170px;
+                    }
+                }
+                button{
+                    font-size: 14px;
+                    line-height: 20px;
+                    padding: 5px;
+                    background: #52503B;
+                    border-radius: 10px;
+                    border: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+aside{
+    text-align: center;
+    margin-top: 40px;
+    img{
+        width: 200px;
+    }
+    p{
+        margin-top: 20px;
+    }
+}

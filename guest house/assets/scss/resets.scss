@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+h1{
+    font-weight: 700;
+}
+h2,h3,h4,h5,h6{
+    font-weight: 400;
+}
+.container{
+    width: 1200px;
+    max-width: 90%;
+    margin: auto;
+}
+button{
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+}
+ul,ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+input{
+    outline: none;
+}

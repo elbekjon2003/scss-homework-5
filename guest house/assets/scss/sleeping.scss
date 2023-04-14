@@ -1,0 +1,70 @@
+@import "./variables.scss";
+
+.sleeping{
+    padding: 100px 0;
+    background-color: $guests;
+}
+.sleeping-main{
+    &>h2{
+        font-size: 32px;
+        line-height: 36px;
+        text-align: center;
+        margin-top: 30px;
+        color: $maincolor;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 8px;
+            background-color: $brown;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -30px;
+        }
+    }
+    &>p{
+        font-size: 16px;
+        line-height: 24px;
+        color: $maincolor;
+        width: 560px;
+        margin: auto;
+        margin-top: 14px;
+        text-align: center;
+        @media(max-width: 610px){
+            width: auto;
+        }
+    }
+    .sleeping-cards{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        @media(max-width:800px){
+            flex-direction: column;
+            align-items: center;
+            row-gap: 30px;
+            margin-top: 50px;
+        }
+        .sleeping-card{
+            width: 32%;
+            text-align: center;
+            @media(max-width:800px){
+                width: 350px;
+            }
+            @media(max-width:380px){
+                width: auto;
+            }
+            img{
+                width: 64px;
+            }
+            h4{
+                margin-top: 12px;
+                font-size: 16px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}

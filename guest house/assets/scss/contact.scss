@@ -1,0 +1,55 @@
+@import "./variables.scss";
+
+.contact{
+    padding: 100px 0;
+    background-color: $guests;
+}
+.contact-main{
+    width: 535px;
+    margin: auto;
+    @media(max-width:600px){
+        width: auto;
+    }
+    h2{
+        font-size: 32px;
+        line-height: 36px;
+        color: $maincolor;
+        margin-top: 30px;
+        text-align: center;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 8px;
+            background-color: $brown;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    p{
+        font-size: 16px;
+        line-height: 24px;
+        color: $maincolor;
+        margin-top: 14px;
+        text-align: center;
+    }
+    .btns{
+        margin-top: 20px;
+        text-align: center;
+        button{
+            padding: 16px 26px;
+            font-size: 16px;
+            line-height: 20px;
+            color: $maincolor;
+            border: 2px solid #52503B;
+            border-radius: 6px;
+            background-color: transparent;
+            &:hover{
+                background-color: $maincolor;
+                color: #fff;
+            }
+        }
+    }
+}

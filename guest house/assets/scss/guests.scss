@@ -1,0 +1,107 @@
+@import "./variables.scss";
+
+.guests{
+    padding: 100px 0 50px;
+    background-color: $guests;
+}
+.guest-main{
+    &>h2{
+        font-size: 32px;
+        line-height: 36px;
+        color: $maincolor;
+        text-align: center;
+        margin-top: 30px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 8px;
+            background-color: $brown;
+            left: 50%;
+            top: -30px;
+            transform: translateX(-50%);
+        }
+    }
+    &>p{
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: $maincolor;
+        width: 572px;
+        margin: auto;
+        margin-top: 14px;
+        @media(max-width:650px){
+            width: auto;
+        }
+    }
+}
+.guest-cards{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    @media(max-width:800px){
+        flex-direction: column;
+        align-items: center;
+    }
+    .guest-card{
+        width: 584px;
+        background-color: #fff;
+        border: 1px solid rgba(82, 80, 59, 0.1);
+        border-radius: 4px;
+        padding: 30px;
+        @media(max-width:650px){
+            width: auto;
+        }
+        i{
+            color: $maincolor;
+        }
+        h3{
+            margin-top: 10px;
+            font-size: 18px;
+            line-height: 24px;
+            color: $secondarycolor;
+        }
+        p{
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 20px;
+            color: $secondarycolor;
+        }
+        .name{
+            padding: 0 10px;
+            border-left:2px solid $brown ;
+        }
+    }
+}
+.navigation{
+    text-align: right;
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    @media(max-width:800px){
+        justify-content: center;
+    }
+    .navigate{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid $maincolor;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        &:hover{
+            background-color: $maincolor;
+            color: #fff;
+        }
+        &:hover>i{
+            color: #fff;
+        }
+        i{
+            font-size: 25px;
+            color: $maincolor;
+        }
+    }
+}

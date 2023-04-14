@@ -1,0 +1,80 @@
+@import "./variables.scss";
+header{
+    background-color: $maincolor;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav{
+    height: 60px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    position: relative;
+    .logo{
+        width: 128px;
+    }
+    ul{
+        display: flex;
+        gap: 24px;
+        @media(max-width:700px){
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 60%;
+            height: calc(100vh - 60px);
+            background-color: #fff;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(-100%);
+            transition: all 0.4s ease-in-out;
+        }
+        @media(max-width:500px){
+            width: 100%;
+        }
+        li{
+            font-size: 14px;
+            line-height: 20px;
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.1);
+            }
+            @media(max-width:700px){
+                color: $maincolor;
+            }
+        }
+    }
+    label{
+        display: none;
+        font-size: 25px;
+        @media(max-width:700px){
+            display: block;
+        }
+    }
+    #check{
+        display: none;
+        &:checked ~ ul{
+            transform: translateX(0);
+        }
+    }
+    button{
+        padding: 11px 18px;
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 6px;
+        color: #fff;
+        background-color: transparent;
+        border: 1px solid #fff;
+        transition: 0.3s;
+        &:hover{
+            background-color: #fff;
+            color: $maincolor;
+        }
+        @media(max-width:700px){
+            display: none;
+        }
+    }
+}
